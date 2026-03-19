@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ─── Reset ──────────────────────────────────────────────────────────────────
+   margin/padding zero — Tailwind classes se control hoga
+   overflow:hidden — body level pe koi extra scroll nahi
+   height:100% — #root poori screen le sake
+*/
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+  overflow: hidden;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden;
+  background-color: #343541; /* App ka dark bg — Login `fixed inset-0` se dhak leta hai */
+  color: #ECECF1;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#root {
+  height: 100%;
+  overflow: hidden;
+}
+
+/* ─── Custom Scrollbar (dark theme) ─────────────────────────────────────────*/
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #565869;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #acacbe;
+}
